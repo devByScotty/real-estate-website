@@ -1,27 +1,28 @@
 import "./App.css";
-import Navbar from "./components/navbar/Navbar";
-import Header from "./components/header/Header";
-import Banner1 from "./components/banner1/Banner1";
-import Banner2 from "./components/banner2/Banner2";
-import WorkFlow from "./components/workFlow/WorkFlow";
-import Testimonial from "./components/testimonial/Testimonial";
-import Footer from "./components/footer/Footer";
-
+import Home from "./pages/Home/Home";
+import Listings from "./pages/Listings/Listings";
+import PropertyInfoPage from "./pages/PropertyInfoPage/propertyInfoPage";
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
+import LoginAndReg from "./components/LoginAndReg/LoginAndReg";
+import Register from "./components/LoginAndReg/Register";
+import Login from "./components/LoginAndReg/Login";
+import { AuthProvider } from './components/navbar/AuthContext'; // Import AuthProvider
 
 
 function App() {
-  return(
-    <div className="App">  
-       <Navbar />
-        <Header  className ="headerBox" /> 
-      <Banner1 className="baner1Box" />
-     <Banner2 className="banner2Box" />
-     <WorkFlow className="workFlowBox" />
-     <Testimonial className="testimonial" />
-      <Footer className="footer" />
-      </div>
-
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/listings" element={<Listings />} />
+        <Route path="/propertyInfo/:id" element={<PropertyInfoPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+{/* 👈 Renders at /app/ */ }
