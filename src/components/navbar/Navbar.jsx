@@ -1,49 +1,103 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Layout, Menu, Avatar, Button, Drawer } from 'antd';
+import { HomeOutlined, MenuOutlined } from '@ant-design/icons';
 import './Navbar.css';
-import { useState } from 'react';
-import { useRef } from "react";
-import { FaBars, FaTimes, FaReact,FaHome } from "react-icons/fa";
 
-
+const { Header } = Layout;
 
 const Navbar = () => {
+  const [drawerVisible, setDrawerVisible] = useState(false);
 
-  /* creates a reference to the nav element in the component. 
-    useRef hook is used to create a reference to the element so that it can be accessed and manipulated in the component.*/
+  // Retrieve user data and token from local storage
+  const storedUserData = JSON.parse(localStorage.getItem('user'));
+  const storedToken = localStorage.getItem('token');
 
-	const navRef = useRef();
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    window.location.reload();
+  };
 
-	/*Below line defines the showNavbar function, which toggles the "responsive" class on the nav element. 
-	  The classList.toggle method is used to add or remove a class from the element.*/
-  
-	  const showNavbar = () => {
-	  navRef.current.classList.toggle("responsive");
-
-	};
-  
+  const toggleDrawer = () => {
+    setDrawerVisible(!drawerVisible);
+  };
 
   return (
-    <div className="header">
-      {/* Renders a react icon with the size of 40px */}
-      <FaHome size={40} />
-      {/* Sets the navRef as a reference to the nav element */}
-      <nav ref={navRef}>
-        <a href="/#">Home</a>
-        <a href="/#">Blog</a>
-        <a href="/#">WorkFlow</a>
-        <a href="/#">Testimonials</a>
-		    <a href="/#">Listings</a>
-        {/* Renders a button with the class of nav-btn nav-close-btn and an FaTimes icon inside */}
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes />
-        </button>
-      </nav>
-      {/* Renders a button with the class of nav-btn and an FaBars icon inside */}
-      <button className="nav-btn" onClick={showNavbar}>
-        <FaBars />
-      </button>
-    </div>
-  )
-}
+    <Layout className="layout">
+      <Header className="header">
+        <div className="logo">
+          <Link to="/">
+            <HomeOutlined style={{ fontSize: '24px', color: '#fff' }} />
+          </Link>
+        </div>
+        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} className="menu-horizontal">
+          <Menu.Item key="1">
+            <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Link to="/listings">Listings</Link>
+          </Menu.Item>
+        </Menu>
+        <div className="navbar-user">
+          {storedUserData && storedToken ? (
+            <div className="navbar-user-info">
+              <div>
+                
+                <span className="user-name">Welcome , {storedUserData.username}</span>
+
+              </div>
+              <div>
+              <Button onClick={handleLogout} style={{ marginLeft: '10px' }}>
+                Logout
+              </Button>
+              </div>
+            </div>
+          ) : (
+            <div className="login-and-register">
+              <Link to="/login">
+                <Button type="primary">Login</Button>
+              </Link>
+              <Link to="/register">
+                <Button>Register</Button>
+              </Link>
+            </div>
+          )}
+        </div>
+        <Button className="menu-button" icon={<MenuOutlined />} onClick={toggleDrawer} />
+      </Header>
+      <Drawer
+        title="Menu"
+        placement="right"
+        onClose={toggleDrawer}
+        visible={drawerVisible}
+        className="drawer-menu"
+      >
+        <Menu mode="vertical">
+          <Menu.Item key="1">
+            <Link to="/" onClick={toggleDrawer}>Home</Link>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Link to="/listings" onClick={toggleDrawer}>Listings</Link>
+          </Menu.Item>
+          {storedUserData && storedToken ? (
+            <Menu.Item key="3" onClick={handleLogout}>
+              Logout
+            </Menu.Item>
+          ) : (
+            <>
+              <Menu.Item key="4">
+                <Link to="/login" onClick={toggleDrawer}>Login</Link>
+              </Menu.Item>
+              <Menu.Item key="5">
+                <Link to="/register" onClick={toggleDrawer}>Register</Link>
+              </Menu.Item>
+            </>
+          )}
+        </Menu>
+      </Drawer>
+    </Layout>
+  );
+};
 
 export default Navbar;

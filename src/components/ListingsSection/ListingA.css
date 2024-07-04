@@ -1,0 +1,266 @@
+:root {
+    --primary-color-2: #212627;
+    --secondary-color: #666;
+    --accent-color: #f4f4f4;
+    --light-color-2: #fff;
+}
+
+.main-section {
+    padding: 20px;
+}
+
+.listingsNav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-color-2);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+
+.buyArea, .searchBar, .selectionButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.buyArea ul, .searchSection ul, .selectionButtons ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buyArea li, .searchSection li, .selectionButtons li {
+    list-style: none;
+}
+
+.buyArea a, .selectionButtons a {
+    text-decoration: none;
+    color: var(--primary-color-2);
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.buyArea a:hover, .selectionButtons a:hover {
+    background-color: var(--primary-color-2);
+    color: var(--light-color);
+}
+
+.searchSection input {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-section img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 220px;
+}
+
+.bottom-section {
+    padding: 20px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--primary-color-2);
+}
+
+p {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.property-info span {
+    margin-right: 10px;
+    color: var(--primary-color-2);
+}
+
+.property-info span i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+}
+
+button {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 0.7em;
+    background-color: var(--primary-color-2);
+    cursor: pointer;
+    color: var(--light-color-2);
+    padding: 0.5em 0.5em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination li a {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination li.active a {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .listingsNav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .buyArea, .searchBar, .selectionButtons {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .card-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .buyArea, .searchSection, .selectionButtons {
+        width: 100%;
+    }
+    .searchSection {
+      margin-left:40px;
+
+    }
+
+    .searchSection input {
+        width: 100%;
+        
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination li {
+        margin: 6px 2px;
+    }
+
+    .pagination li a {
+        padding: 8px 12px;
+        font-size: 15px;
+    }
+    
+}
+
+
+@media (max-width: 380px) {
+    .listingsNav {
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .listingsNav ul {
+        flex-direction: row;
+        
+        gap: 10px;
+    }
+
+    .listingsNav li {
+        width: 100%;
+    }
+
+    .listingsNav li a {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 10px;
+    }
+
+    .listingsNav li i {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .selectionButtons ul {
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+
+    .selectionButtons li a {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 10px;
+        
+        
+    }
+    .searchSection input {
+        width: 100%;
+    }
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination li {
+        margin: 5px 0;
+    }
+
+    .pagination li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+}

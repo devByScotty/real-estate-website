@@ -1,0 +1,302 @@
+/* Default styles */
+
+.propertyInfo {
+  padding: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.pHeadings {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pHeadings h2 {
+  font-size: 16px; /* Adjusted font size */
+}
+
+.imgContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  display: block;
+  width: 100%;
+  animation: slide-in 0.5s ease-out;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px; /* Added padding to move arrows closer to edges */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.slide-buttons button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.slide-buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.thumbnails {
+  margin-top: 10px;
+}
+
+.thumbnails-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 80px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.thumbnails img.active {
+  border: 2px solid #007bff;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.1);
+}
+
+.details-bond {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.details {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.details td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.details td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+.details td:last-child {
+  width: 60%;
+}
+
+.bond-calculator {
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bond-calculator h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bond-calculator .input-group {
+  margin-bottom: 15px;
+}
+
+.bond-calculator label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bond-calculator input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bond-calculator button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bond-calculator button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+  animation: slide-up 0.5s ease-out;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-content .input-group {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .pHeadings {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pHeadings h2 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .details-bond {
+    flex-direction: column-reverse; /* Stack bond calculator below property details */
+  }
+}
+
+@media (max-width: 576px) {
+  .thumbnails img {
+    width: 60px; /* Decrease thumbnail size for smaller screens */
+  }
+
+  .bond-calculator .input-group {
+    margin-bottom: 10px; /* Adjust spacing for smaller screens */
+  }
+
+  .bond-calculator button {
+    padding: 8px; /* Adjust button padding for smaller screens */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
