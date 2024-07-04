@@ -11,7 +11,7 @@ const FETCH_LOGIN_FAILURE = 'FETCH_LOGIN_FAILURE';
 // Register User
 export const createRegistration = (registerData) => async (dispatch) => {
   try {
-    const response = await axios.post('http://localhost:3001/api/register', registerData);
+    const response = await axios.post('https://real-estate-backend-4hnr.onrender.com/api/register', registerData);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: response.data,
@@ -27,7 +27,7 @@ export const createRegistration = (registerData) => async (dispatch) => {
 // Login User
 export const getLogin = (loginData) => async (dispatch) => {
   try {
-    const response = await axios.post('http://localhost:3001/api/login', loginData);
+    const response = await axios.post('https://real-estate-backend-4hnr.onrender.com/api/login', loginData);
     dispatch({
       type: LOGIN_SUCCESS,
       payload: response.data,
@@ -46,7 +46,7 @@ export const getLogin = (loginData) => async (dispatch) => {
 // Fetch Login Data
 export const showLogin = () => async (dispatch) => {
   try {
-    const response = await axios.get('http://localhost:3001/api/current-user');
+    const response = await axios.get('https://real-estate-backend-4hnr.onrender.com/api/current-user');
     dispatch({
       type: FETCH_LOGIN_SUCCESS,
       payload: response.data,
