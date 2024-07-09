@@ -229,8 +229,8 @@
 
     .card-left p{
 
-      font-size:0.78rem;
-      
+      font-size:0.7rem;
+      height:100%;
       width:100%;
       justify-content:center;
 
@@ -242,19 +242,19 @@
 
       display:flex;
       flex-direction:row;
-      margin: 0;
+      margin-top:1rem;
       position:relative;
       width:100%;
       height:100%;
       justify-content:center;
-    
-
+      
+  
     }
 
     .iconFont-text{
 
       font-size: 1rem;
-
+      
     }
     .iconFont-text i {
 
@@ -319,14 +319,122 @@
 
   }
 
-  @media only screen and (max-width: 380px) {
+  /* Media Queries for Devices Under 390px */
+@media only screen and (max-width: 390px) {
 
-    .iconFonts { 
+  .container2 {
+    padding: 0 1rem;
+    margin: 0.5rem 0.5rem;
+    height: 100vh;
+    overflow: hidden;
+  }
 
-      display:none;
+  .grid-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    height:100%;
+  }
 
-    }
-    
+  
+  .section-header {
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+  }
 
+  .section-header h1 {
+    font-size: 1rem;
+  }
+
+  .card-left {
+    padding: 0.5rem 0.5rem;
+    position: relative;
+  }
+
+  .card-left h1 {
+    font-size: 1.5rem;
 
   }
+
+  .card-left p {
+    font-size: 0.7rem;
+    height:100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .iconFonts {
+    height:100%;
+    width: 100%;
+    padding:10px 10px;
+    background:red;
+  }
+
+  .right-2 {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+
+  .container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero1-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero1-1 img {
+    height: 20vh;
+    width: 240px;
+    z-index: 100;
+  }
+
+  .hero2-2,
+  .hero3-3 {
+    display: none;
+  }
+
+  .iconFont-text {
+    font-size: 0.9rem;
+  }
+
+  .iconFont-text i {
+    font-size: 1rem;
+    color: aliceblue;
+    border-radius: 50px;
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dotted-line {
+    height: 1px;
+  }
+
+  .dotted-line::before {
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .button:first-child {
+    padding: 6px 6px;
+    margin-right: 0.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .button:last-child {
+    padding: 6px 6px;
+    margin-left: 0.1rem;
+  }
+}

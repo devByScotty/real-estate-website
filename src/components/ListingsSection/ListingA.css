@@ -174,7 +174,13 @@ button {
     
 }
 
+
 @media (max-width: 480px) {
+
+    .main-section {
+        overflow:hidden;
+    }
+
     .buyArea, .searchSection, .selectionButtons {
         width: 100%;
     }
@@ -200,11 +206,31 @@ button {
         padding: 8px 12px;
         font-size: 15px;
     }
+
+    .card{
+        width: 100%;
+        max-width: 372px;
+    }
+
+    .top-section {
+        width: 100%;
+        //background:red;
+    }
+
+    .top-section img{
+        max-width: 372px;
+        
+    }
     
 }
 
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
+
+    .main-section {
+        overflow:hidden;
+    }
+    
     .listingsNav {
         flex-direction: column;
         justify-content:center;
@@ -234,28 +260,76 @@ button {
         margin-bottom: 5px;
     }
 
-    .selectionButtons ul {
-        flex-direction: row;
-        gap: 20px;
-        
+    .buyArea{
+        width:100%;
+        margin:0.5rem 0.5rem;
     }
+
+    .buyArea ul {
+        width: 100%;
+    }
+    
+    .searchSection{
+        width:100%;
+    }
+
+    .searchSection ul{
+        width:100%;
+    }
+
+    .searchSection ul li input{
+        width:90%;
+        margin-right:200px;
+    }
+
+    .searchSection input::placeholder {
+        font-size: 1rem; /* Adjust the font size as needed */
+    }
+
+    .selectionButtons{
+        width:100%;
+        flex-direction: row;
+        padding: 10px 10px;
+    }
+
+    .selectionButtons ul {
+        width:100%;
+        gap: 20px;
+        //justify-content:space-between; 
+    }
+
 
     .selectionButtons li a {
         width: 100%;
         justify-content: center;
         padding: 10px 10px;
-        
-        
     }
+
+
     .searchSection input {
         width: 100%;
     }
+
+    .card{
+        max-width: 350px;
+    }
+
+    .top-section {
+        width: 100%;
+        justify-content:center;
+    }
+
+    .top-section img{
+        max-width: 350px;
+        
+    }
+
     .pagination {
         flex-wrap: wrap;
     }
 
     .pagination li {
-        margin: 5px 0;
+        margin: 7px 3px;
     }
 
     .pagination li a {
@@ -264,3 +338,4 @@ button {
     }
 
 }
+

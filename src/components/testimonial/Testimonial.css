@@ -181,3 +181,239 @@
 
 
 }
+
+
+/* Media Query for screens between 479px and 768px */
+@media only screen and (min-width: 479px) and (max-width: 768px) {
+    .container-6 {
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .t-heading {
+        flex-direction: column;
+        padding: 1.5rem 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .t-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .t-heading p {
+        font-size: 1.1rem;
+    }
+
+    .testimonials {
+        flex-direction: column;
+        padding: 1.5rem 1.5rem;
+        margin: 1rem 1rem;
+    }
+
+    .testimonials-info i {
+        font-size: 3rem;
+    }
+
+    .testimonials-info p {
+        font-size: 1rem;
+    }
+
+    .line-container-1 {
+        height: 80px;
+    }
+
+    .dotted-line-2 {
+        top: -200px;
+        height: 10rem;
+    }
+
+    .arrows {
+        gap: 1rem;
+        bottom: 1rem;
+        left: 40%;
+    }
+
+    .arrows i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Query for screens larger than 768px */
+@media only screen and (min-width: 769px) {
+    .container-6 {
+        height: 95vh;
+        padding: 2rem;
+    }
+
+    .t-heading {
+        flex-direction: row;
+        padding: 2rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .t-heading h1 {
+        font-size: 2rem;
+    }
+
+    .t-heading p {
+        font-size: 1.2rem;
+    }
+
+    .testimonials {
+        flex-direction: row;
+        padding: 2rem 2rem;
+        margin: 2rem 2rem;
+    }
+
+    .testimonials-info i {
+        font-size: 4rem;
+    }
+
+    .testimonials-info p {
+        font-size: 1.2rem;
+    }
+
+    .line-container-1 {
+        height: 100px;
+    }
+
+    .dotted-line-2 {
+        top: -300px;
+        height: 15rem;
+    }
+
+    .arrows {
+        gap: 1.5rem;
+        bottom: 2rem;
+        left: 47.5rem;
+    }
+
+    .arrows i {
+        font-size: 2rem;
+    }
+}
+
+/* Media Query for screens with a maximum width of 390px */
+@media only screen and (max-width: 390px) {
+
+    .container-6 {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .t-heading {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 0.5rem;
+        padding: 1rem 1rem;
+    }
+
+    .t-heading h1 {
+        font-size: 1.2rem;
+    }
+
+    .t-heading p {
+        font-size: 0.9rem;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding: 1.5rem 0.5rem;
+        margin: 0.1rem;
+    }
+
+    .testimonials-info i {
+        font-size: 3rem;
+    }
+
+    .testimonials-info p {
+        font-size: 0.7rem;
+    }
+
+    .line-container-1 {
+        display: none;
+    }
+
+    .arrows {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom:4rem;
+         /* Adjust the top margin as needed */
+    }
+
+    .arrows i {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+
+    .container-6 {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .t-heading {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 0.5rem;
+        padding: 1rem 1rem;
+    }
+
+    .t-heading h1 {
+        font-size: 1.1rem;
+        
+    }
+
+    .t-heading p {
+        font-size: 0.9rem;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9rem;
+        padding: 1.5rem 0.5rem;
+        margin: 0.2rem;
+    }
+
+    .testimonials-info i {
+        font-size: 3rem;
+    }
+
+    .testimonials-info p {
+        font-size: 0.7rem;
+    }
+
+    .line-container-1 {
+        display: none;
+    }
+
+    .arrows {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom:7rem;
+         /* Adjust the top margin as needed */
+    }
+
+    .arrows i {
+        font-size: 1.7rem;
+    }
+}

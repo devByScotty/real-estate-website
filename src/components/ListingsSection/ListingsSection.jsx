@@ -53,8 +53,8 @@ const ListingsSection = () => {
                 </div>
                 <div className='selectionButtons'>
                     <ul>
-                        <li><i className="fas fa-map"></i><a href="#"> Map</a></li>
-                        <li><i className="fas fa-th"></i><a href="#"> Grid</a></li>
+                        <li><a href="#"><i className="fas fa-map"></i>Map</a></li>
+                        <li><a href="#"><i className="fas fa-th"></i> Grid</a></li>
                     </ul>
                 </div>
             </div>

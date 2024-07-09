@@ -9,47 +9,37 @@
 
   .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
     justify-content: center;
   }
 
   .left {
-
-    
     padding: 2rem 1rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     height: 100%;
     width: 100%;
     overflow: hidden;
     display:flex;
     flex-direction:column;
-
   }
 
   .right {
-
     position: relative;
     padding: 1rem 1rem;
     margin-left: 1.5rem;
     height: 100%;
     width: 100%;
     overflow: hidden;
-   
-
   }
 
   .card1 {
-
     position: relative;
     top: 10px;
     left: 150px;
-    
-
   }
 
   .title-2{
-
     font-size:14px;
     font-weight:600;
     padding:10px 20px;
@@ -61,73 +51,59 @@
     outline: none;
     transition: 0.2s ease;
     text-transform: uppercase;
-    
   }
 
   .header-title{
-
     position: relative;
     top: 100px;
     left: 130px;
-
   }
 
   .header-title h1{
-
     font-size :80px;
     letter-spacing: 2px;
     line-height: 100px;
     font-weight:700;
     padding: 10px 10px;
     color:#1a1a1a;
-
-
   }
 
   .header-title p {
-
     font-size :18px;
     font-weight:505;
     padding-right: 20px;
     color:grey;
-
-
   }
 
   .button-cards {
-
     position: relative;
+    width:100%;
+    height:100%;
+    gap:10px;
     top:100px;
-    left:130px;
-
+    right:5px;
   }
 
   img:first-child {
-
-    max-width: 400px;
-    height: 50vh;
+    max-width: 500px;
+    height: 60vh;
     z-index: -100;
     opacity: 0.8;
     fill: #1a1a1a;
-
-  
   }
 
   img:nth-child(2) {
-
     max-width: 300px;
     height: 30vh;
     z-index: -100;
     opacity: 0.8;
     fill: #1a1a1a;
-
-  
   }
 
   .hero1  img{
     position: relative;
-    top: 0px;
-    left:100px;
+    top: 80px;
+    left:20px;
     border-radius: 60%;
     /* clip-path: polygon(0 0, 84% 0, 39% 45%, 0 83%);
     clip-path: circle(41.0% at 50% 50%); */
@@ -139,8 +115,8 @@
   .hero2  img{
     position: absolute;
     margin-right: 0.2rem;
-    top: 10px;
-    right: 1px;
+    top: 20px;
+    right: 25px;
     border-radius: 50%;
     clip-path: polygon(49% 52%, 100% 0, 100% 99%, 0 100%);
     /*clip-path: circle(41.0% at 50% 50%); */
@@ -174,6 +150,8 @@
     border: 1.7px solid rgb(39, 38, 38);
     border-radius: 40px;
     margin-right: 0.2rem;
+    margin-bottom: 0.5rem;
+    padding:10px 10px;
 
 
 }
@@ -184,6 +162,7 @@
     color: #FAF9F6;
     background-color: rgb(39, 38, 38);
     margin-left: 0.2rem;
+    padding:10px 10px;
 
 
 }
@@ -274,7 +253,7 @@
 
   }
 
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 400px) {
 
     .grid-2 {
       display: flex;
@@ -360,3 +339,233 @@
 
 
   }
+
+  /* Media Queries for Tablets (600px to 1024px) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+  .container {
+    padding: 0 2rem;
+    margin: 0.5rem 0.5rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .left {
+    padding: 1.5rem 1rem;
+    margin-right: 0;
+  }
+
+  .right {
+    padding: 1rem 1rem;
+    margin-left: 0;
+  }
+
+  .card1 {
+    top: 5px;
+    left: 75px;
+  }
+
+  .title-2 {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .header-title {
+    top: 50px;
+    left: 65px;
+  }
+
+  .header-title h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  .header-title p {
+    font-size: 16px;
+  }
+
+  .button-cards {
+    top: 50px;
+    right: 5px;
+  }
+
+  img:first-child {
+    max-width: 400px;
+    height: 50vh;
+  }
+
+  img:nth-child(2) {
+    max-width: 250px;
+    height: 25vh;
+  }
+
+  .hero1 img {
+    top: 40px;
+    left: 10px;
+  }
+
+  .hero2 img {
+    top: 10px;
+    right: 15px;
+  }
+
+  .dotted-line {
+    height: 1px;
+  }
+
+  .dotted-line::before {
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .button:first-child {
+    padding: 8px 8px;
+    margin-right: 0.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .button:last-child {
+    padding: 8px 8px;
+    margin-left: 0.1rem;
+  }
+}
+
+/* Adjustments for smaller tablets (600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+  .header-title h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .header-title p {
+    font-size: 14px;
+  }
+
+  img:first-child {
+    max-width: 350px;
+    height: 45vh;
+  }
+
+  img:nth-child(2) {
+    max-width: 200px;
+    height: 20vh;
+  }
+
+  .hero1 img {
+    top: 30px;
+    left: 5px;
+  }
+
+  .hero2 img {
+    top: 5px;
+    right: 10px;
+  }
+}
+/* Media Queries for Devices Under 390px */
+@media only screen and (max-width: 390px) {
+
+  .container {
+    padding: 0 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 90vh;
+    width: 100%;
+  }
+
+  .left {
+    padding: 1rem 1rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .right {
+    padding: 1rem 1rem;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .card1 {
+    top: 0;
+    left: 5px;
+    width: 100%;
+  }
+
+  .title-2 {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .header-title {
+    top: 10px;
+    left: 5px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .header-title h1 {
+    font-size: 1.5rem;
+    line-height: 50px;
+  }
+
+  .header-title p {
+    font-size: 10px;
+  }
+
+  .button-cards {
+    display: none;
+  }
+
+  img:first-child {
+    max-width: 250px;
+    height: 30vh;
+  }
+
+  img:nth-child(2) {
+    max-width: 200px;
+    height: 20vh;
+  }
+
+  .hero1 img {
+    top: 0px;
+    left: 0px;
+    border-radius: 60%;
+    box-shadow: 0px -15px 26px -3px (198, 142, 23);
+  }
+
+  .hero2 img {
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    clip-path: polygon(49% 52%, 100% 0, 100% 99%, 0 100%);
+    box-shadow: 0px -15px 26px -3px (198, 142, 23);
+  }
+
+  .dotted-line {
+    height: 1px;
+  }
+
+  .dotted-line::before {
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .button:first-child {
+    padding: 6px 6px;
+    margin-right: 0.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .button:last-child {
+    padding: 6px 6px;
+    margin-left: 0.1rem;
+  }
+}

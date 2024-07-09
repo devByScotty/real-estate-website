@@ -59,11 +59,11 @@
 
 .slide-buttons {
   position: absolute;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
   padding: 0 20px; /* Added padding to move arrows closer to edges */
   box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
